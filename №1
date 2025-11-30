@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y, r;
+
+    cout << "Введите координаты точки x: ";
+    cin >> x;
+
+    cout << "Введите координаты точки y: ";
+    cin >> y;
+
+    cout << "Введите радиус круга R: ";
+    cin >> r;
+
+    if (x * x + y * y <= r * r)
+        cout << "Координаты x и y входят в радиус круга R";
+    else
+        cout << "Координаты x и y не входят в радиус круга R";
+
+    return 0;
+}
