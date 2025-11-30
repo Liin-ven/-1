@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y;
+
+    cout << "Введите координату x: ";
+    cin >> x;
+
+    cout << "Введите координату y: ";
+    cin >> y;
+
+    if (x > 0 && y > 0)
+        cout << "Точка находится в I четверти.";
+    else if (x < 0 && y > 0)
+        cout << "Точка находится во II четверти.";
+    else if (x < 0 && y < 0)
+        cout << "Точка находится в III четверти.";
+    else if (x > 0 && y < 0)
+        cout << "Точка находится в IV четверти.";
+    else if (x == 0 && y == 0)
+        cout << "Точка находится в начале координат.";
+    else if (x == 0)
+        cout << "Точка лежит на оси Y.";
+    else if (y == 0)
+        cout << "Точка лежит на оси X.";
+
+    return 0;
+}
