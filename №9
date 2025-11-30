@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int a = N / 100;       // сотни
+    int b = (N / 10) % 10; // десятки
+    int c = N % 10;        // единицы
+
+    if (a == b || a == c || b == c)
+        cout << "Есть одинаковые цифры\n";
+    else
+        cout << "Одинаковых цифр нет\n";
+
+    return 0;
+}
