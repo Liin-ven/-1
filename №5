@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, r;  // сторона и радиус могут быть не целыми
+
+    cout << "Введите длину стороны квадрата: ";
+    cin >> a;
+
+    cout << "Введите радиус круга: ";
+    cin >> r;
+
+    if (2 * r == a)
+        cout << "Круг вписан в квадрат.";
+    else
+        cout << "Круг НЕ вписан в квадрат.";
+
+    return 0;
+}
