@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    // Сначала находим наибольшую сторону
+    int max_side = a;
+    int x = b, y = c;
+
+    if (b > max_side) {
+        max_side = b;
+        x = a;
+        y = c;
+    }
+    if (c > max_side) {
+        max_side = c;
+        x = a;
+        y = b;
+    }
+
+    // Проверка по теореме Пифагора
+    if (max_side*max_side == x*x + y*y)
+        cout << "Треугольник прямоугольный\n";
+    else
+        cout << "Треугольник не прямоугольный\n";
+
+    return 0;
+}
