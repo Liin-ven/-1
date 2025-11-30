@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Введите трехзначное число: ";
+    cin >> N;
+
+    // Проверка, что число трехзначное
+    if (N < 100 || N > 999) {
+        cout << "Число не трехзначное!\n";
+        return 1;
+    }
+
+    // Получаем цифры числа
+    int a = N / 100;        // сотни
+    int b = (N / 10) % 10;  // десятки
+    int c = N % 10;         // единицы
+
+    int sum_cubes = a*a*a + b*b*b + c*c*c;
+
+    if (N*N == sum_cubes) {
+        cout << "Квадрат числа равен сумме кубов его цифр.\n";
+    } else {
+        cout << "Квадрат числа НЕ равен сумме кубов его цифр.\n";
+    }
+
+    return 0;
+}
