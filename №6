@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+
+    cout << "Введите трехзначное число: ";
+    cin >> num;
+
+    // Извлекаем цифры
+    int a = num / 100;        // сотни
+    int b = (num / 10) % 10;  // десятки
+    int c = num % 10;         // единицы
+
+    int sum = a + b + c;
+
+    if (sum == 9)
+        cout << "Сумма цифр равна 9.";
+    else
+        cout << "Сумма цифр НЕ равна 9.";
+
+    return 0;
+}
